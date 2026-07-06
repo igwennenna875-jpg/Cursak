@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border-radius: 10px;
+    color: white;
+}
+
+.player-score, .computer-score {
+    flex: 1;
+}
+
+.player-score h2, .computer-score h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.player-score p, .computer-score p {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.divider {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+#gameContainer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+    border: 3px solid #667eea;
+    display: block;
+}
+
+.instructions {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.instructions p {
+    color: #333;
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+.instructions strong {
+    color: #667eea;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    font-size: 1em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
